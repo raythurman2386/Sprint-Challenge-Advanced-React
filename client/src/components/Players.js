@@ -1,13 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Player from './Player'
+import { useData } from '../hooks/useData'
 
 const Players = ({ data }) => {
-  const [players, setPlayers] = useState([])
-
-  useEffect(() => {
-    setPlayers(data)
-  }, [data])
-
+  const [players, setPlayers] = useData(data)
 
   return (
     <div>
