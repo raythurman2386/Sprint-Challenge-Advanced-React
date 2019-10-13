@@ -1,9 +1,12 @@
 import React from 'react';
 import axios from 'axios'
 
+// Components
+import Players from './components/Players'
+
 class App extends React.Component {
   state = {
-    players: []
+    data: []
   }
 
   // fetch the players
@@ -12,7 +15,7 @@ class App extends React.Component {
       .get('http://localhost:5000/api/players')
       .then(res => {
         this.setState({
-          players: res.data
+          data: res.data
         })
       })
       .catch(err => console.log(err.response))
@@ -21,7 +24,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Test</h1>
+        <Players data={this.state.data} />
       </div>
     );
   }
