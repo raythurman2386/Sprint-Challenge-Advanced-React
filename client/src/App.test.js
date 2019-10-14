@@ -25,7 +25,7 @@ describe('App Test Suite', () => {
     expect(element).toHaveClass('App')
   })
 
-  it('Should test the classname on the toggle', () => {
+  it('Should test the nav is visible', () => {
     const wrapper = rtl.render(<App />)
 
     const myNav = wrapper.getByRole(/navigation/i)
@@ -35,7 +35,8 @@ describe('App Test Suite', () => {
 })
 
 describe('Players Test Suite', () => {
-  it('Should be rendering players', () => {
+  it('Should have the class of players', () => {
+
     const wrapper = rtl.render(<Players />)
 
     const element = wrapper.getByTestId("players-test-id")
