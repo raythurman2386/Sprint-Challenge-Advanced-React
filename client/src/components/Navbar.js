@@ -6,7 +6,7 @@ const Navbar = () => {
   const [darkMode, handleDarkMode] = useDarkMode()
 
   return (
-    <nav className='navbar'>
+    <nav data-testid="nav-test-id" className='navbar'>
       <h1>The Womens World Cup</h1>
       <div className='dark-mode__toggle'>
         <div

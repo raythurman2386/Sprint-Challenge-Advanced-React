@@ -3,7 +3,7 @@ import * as rtl from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import App from './App';
 import Players from './components/Players'
-import Player from './components/Player'
+import Navbar from './components/Navbar';
 
 afterEach(rtl.cleanup);
 
@@ -24,7 +24,9 @@ describe('App Test Suite', () => {
 
     expect(element).toHaveClass('App')
   })
+})
 
+describe('Nav Test Suite', () => {
   it('Should test the nav is visible', () => {
     const wrapper = rtl.render(<App />)
 
@@ -32,9 +34,27 @@ describe('App Test Suite', () => {
 
     expect(myNav).toBeVisible()
   })
+
+  it('Should have the class of navbar', () => {
+
+    const wrapper = rtl.render(<Navbar />)
+
+    const element = wrapper.getByTestId("nav-test-id")
+
+    expect(element).toHaveClass('navbar')
+  })
 })
 
 describe('Players Test Suite', () => {
+  it('Should render the players', () => {
+
+    const wrapper = rtl.render(<Players />)
+
+    const element = wrapper.getByTestId("players-test-id")
+
+    expect(element).toBeVisible()
+  })
+
   it('Should have the class of players', () => {
 
     const wrapper = rtl.render(<Players />)
