@@ -3,6 +3,7 @@ import axios from 'axios'
 
 // Components
 import Players from './components/Players'
+import Navbar from './components/Navbar';
 
 class App extends React.Component {
   state = {
@@ -24,7 +25,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>The Womens World Cup</h1>
+        <Navbar />
         <Players data={this.state.data} />
       </div>
     );
