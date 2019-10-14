@@ -2,8 +2,9 @@ import React from 'react';
 import * as rtl from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import App from './App';
-import Players from './components/Players'
 import Navbar from './components/Navbar';
+import Players from './components/Players'
+import Player from './components/Player'
 
 afterEach(rtl.cleanup);
 
@@ -63,5 +64,28 @@ describe('Players Test Suite', () => {
 
     expect(element).toHaveClass('Players')
   })
-
 })
+
+describe('Player Test Suite', () => {
+  it('Should render a player', () => {
+    const wrapper = rtl.render(<Player player={player} />)
+
+    const element = wrapper.getByTestId("player-test-id")
+
+    expect(element).toBeVisible()
+  })
+
+  it('Should render a player', () => {
+    const wrapper = rtl.render(<Player player={player} />)
+
+    const element = wrapper.getByText(/ray/i)
+
+    expect(element).toBeInTheDocument()
+  })
+})
+
+const player = {
+  name: 'Ray',
+  country: 'USA',
+  searches: 1
+}
