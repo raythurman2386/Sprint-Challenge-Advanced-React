@@ -24,7 +24,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div data-testid="app-test-id" className="App">
         <Navbar />
         <Players data={this.state.data} />
       </div>
