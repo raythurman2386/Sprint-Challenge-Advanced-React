@@ -75,7 +75,7 @@ describe('Player Test Suite', () => {
     expect(element).toBeVisible()
   })
 
-  it('Should render a player', () => {
+  it('Should find the players name', () => {
     const wrapper = rtl.render(<Player player={player} />)
 
     const element = wrapper.getByText(/ray/i)
