@@ -10,7 +10,7 @@ afterEach(rtl.cleanup);
 describe('App Test Suite', () => {
   it('Should Render text to the screen', () => {
     const wrapper = rtl.render(<App />)
-    wrapper.debug();
+    // wrapper.debug();
     // Queries
     const hasText = wrapper.getByText(/women/i)
     // Assertions
