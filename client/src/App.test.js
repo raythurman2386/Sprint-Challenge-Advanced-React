@@ -15,6 +15,14 @@ describe('App Test Suite', () => {
     // Assertions
     expect(hasText).toBeInTheDocument()
   })
+
+  it('Should test the classname on the toggle', () => {
+    const wrapper = rtl.render(<App />)
+
+    const myNav = wrapper.getByRole(/navigation/i)
+
+    expect(myNav).toBeVisible()
+  })
 })
 
 describe('Players Test Suite', () => {

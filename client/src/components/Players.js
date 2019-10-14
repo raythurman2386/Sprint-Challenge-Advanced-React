@@ -4,7 +4,7 @@ import Player from './Player'
 import { useData } from '../hooks/useData'
 
 const Players = ({ data }) => {
-  const [players, setPlayers] = useData(data)
+  const [players] = useData(data)
 
   return (
     <PlayersWrapper>
