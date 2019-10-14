@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Player = ({ player }) => {
   return (
-    <PlayerWrapper>
+    <PlayerWrapper data-testid="player-test-id">
       <h1>{player.name}</h1>
       <h3>{player.country}</h3>
       <p>{player.searches}</p>
