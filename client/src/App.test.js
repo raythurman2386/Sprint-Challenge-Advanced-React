@@ -38,7 +38,9 @@ describe('Players Test Suite', () => {
   it('Should be rendering players', () => {
     const wrapper = rtl.render(<Players />)
 
-    expect(wrapper).toBeVisible()
+    const element = wrapper.getByTestId("players-test-id")
+
+    expect(element).toHaveClass('Players')
   })
 
 })

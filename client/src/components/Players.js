@@ -7,7 +7,7 @@ const Players = ({ data }) => {
   const [players] = useData(data)
 
   return (
-    <PlayersWrapper>
+    <PlayersWrapper data-testid="players-test-id" className='Players'>
       {/* Loop over players and create a player card */}
       {players && players.map((player, index) => <Player key={index} player={player} />)}
     </PlayersWrapper>
